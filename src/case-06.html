@@ -75,7 +75,50 @@
 
     .car>img{
       width: 100%;
+      animation: car 1s linear infinite;
     }
+
+    @keyframes car {
+      100%{
+        transform: translateY(-1px);
+      }
+      50%{
+        transform: translateY(-1px);
+      }
+      0%{
+        transform: translateY(-1px);
+      }
+
+    }
+
+    .wheel{
+      left: 50%;
+      bottom: 150px;
+      transform: translateX(-50%);
+      position: absolute;
+      z-index: 2;
+    }
+
+    .wheel>img{
+      width: 72px;
+      height: 72px;
+      animation: wheel 1s infinite;
+    }
+    .back-wheel{
+      left: -165px;
+      position: absolute;
+    }
+    .front-wheel{
+      left: 80px;
+      position: absolute;
+    }
+    @keyframes wheel {
+      100%{
+        transform: rotate(360deg);
+      }
+
+    }
+
 
   </style>
 
@@ -90,6 +133,13 @@
   <div class="car">
     <img src="Assert/case6/car.png" alt="">
   </div>
+
+  <div class="wheel">
+    <img src="Assert/case6/wheel.png"class="back-wheel">
+    <img src="Assert/case6/wheel.png"class="front-wheel">
+  </div>
+
+
 </div>
 
 </body>
